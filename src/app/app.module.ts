@@ -11,8 +11,10 @@ import { RouterModule } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { ButtonComponent } from './components/button/button.component';
 import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeroComponent } from './components/hero/hero.component';
 @NgModule({
-  declarations: [AppComponent, LandingComponent, ButtonComponent, NavComponent],
+  declarations: [AppComponent, LandingComponent, ButtonComponent, NavComponent, FooterComponent, HeroComponent],
   imports: [
     CoreModule,
     BrowserModule,
