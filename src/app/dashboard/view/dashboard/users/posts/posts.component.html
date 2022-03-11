@@ -1,0 +1,31 @@
+<table
+    mat-table
+    *ngIf="posts.length; else noposts"
+    [dataSource]="posts"
+    multiTemplateDataRows
+    class="table-posts">
+  <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let element">
+      {{element[column]}}
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+      class="example-element-row">
+  </tr>
+</table>
+
+<ng-template #noposts>
+    <div class="text-center">
+        <h4>Aún no tienes posts</h4>
+    </div>
+</ng-template>
+<!-- <mat-list role="list">
+    <div mat-subheader>Posts</div>
+    <mat-list-item *ngFor="let post of posts" role="listitem">{{post.id}} {{post.title}}</mat-list-item>
+</mat-list> -->
+<div class="form-post text-center">
+  <button mat-raised-button color="primary" (click)="openDialog()">Crear un post</button>
+</div>

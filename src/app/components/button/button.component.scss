@@ -1,0 +1,11 @@
+.mat-flat-button {
+    border-radius: 8px;
+    &.mat-button-base {
+        color: #7C3AED;
+        background: #EDE9FE;
+        &.mat-primary {
+            color: white;
+            background: #7C3AED;
+        }
+    }
+}

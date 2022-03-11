@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Crear Post</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Título</mat-label>
+    <input type="text" [(ngModel)]="data.title" placeholder="Título" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Descripción</mat-label>
+    <input type="text" [(ngModel)]="data.body" placeholder="Descripción" matInput>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button [mat-dialog-close]="data" color="primary">Guardar</button>
+</div>
